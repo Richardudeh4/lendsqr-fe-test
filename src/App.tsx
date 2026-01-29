@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<Navigate to="/dashboard/users" replace />} />
           <Route path="users" element={<Users />} />
           <Route path="users/:userId" element={<UserDetails />} />
         </Route>
